@@ -1,0 +1,29 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eric-lab-star/myBlog.git"
+  },
+  "author": "Eric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eric-lab-star/myBlog/issues"
+  },
+  "homepage": "https://github.com/Eric-lab-star/myBlog#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "nodemon": "^2.0.15"
+  }
+}
