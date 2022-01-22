@@ -1,15 +1,16 @@
 import express from "express";
 import "dotenv/config";
-import { getPage } from "./notion";
+import globalRouter from "./routers/globalRouter";
+import videoRouter from "./routers/videoRouter";
+import userRouter from "./routers/userRouter";
 
 const app = express();
 const PORT = 4000;
 
-const home = async (req, res) => {
-  const videos = await getPage();
-  res.json(videos);
-};
-app.use(express.static("src/public"));
-app.get("/video", home);
+app.set("view engine", "pug");
+app.set("views", __dirname + "/views");
+app.use("/", globalRouter);
+app.use("/video", videoRouter);
+app.use("/user", userRouter);
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
